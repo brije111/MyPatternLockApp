@@ -96,7 +96,7 @@ class MainActivity : AppCompatActivity() {
                 Handler().postDelayed({
                     pattern_lock_view.clearPattern()
                     if (needRecreate) recreate()
-                }, 2000)
+                }, 1000)
             }
 
             override fun onCleared() {
