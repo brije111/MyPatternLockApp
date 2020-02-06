@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">My Pattern Lock App</string>
+    <string name="clear">Reset</string>
+</resources>
