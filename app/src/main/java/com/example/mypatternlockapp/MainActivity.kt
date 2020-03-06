@@ -26,6 +26,7 @@ import com.andrognito.patternlockview.listener.PatternLockViewListener
 import com.andrognito.patternlockview.utils.PatternLockUtils
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
+
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -33,8 +34,9 @@ class MainActivity : AppCompatActivity() {
 
     companion object {
         val PREFERENCE:String = "my_preference"
-        val PERMISSIONS_REQUEST_READ_LOCATION = 1
-        val PERMISSIONS_REQUEST_SEND_SMS = 2
+        val PERMISSIONS_REQUEST = 1
+        //val PERMISSIONS_REQUEST_SEND_SMS = 2
+
     }
 
     lateinit var sharedPreferences: SharedPreferences;
@@ -169,25 +171,9 @@ class MainActivity : AppCompatActivity() {
                 // No explanation needed, we can request the permission.
                 ActivityCompat.requestPermissions(this,
                     arrayOf(Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.SEND_SMS),
-                    PERMISSIONS_REQUEST_READ_LOCATION)
+                    PERMISSIONS_REQUEST)
             }
         }
-//        if (ContextCompat.checkSelfPermission(this,
-//                Manifest.permission.SEND_SMS)
-//            != PackageManager.PERMISSION_GRANTED) {
-//
-//            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
-//                    Manifest.permission.SEND_SMS)) {
-//                // Show an explanation to the user *asynchronously* -- don't block
-//                // this thread waiting for the user's response! After the user
-//                // sees the explanation, try again to request the permission.
-//            } else {
-//                // No explanation needed, we can request the permission.
-//                ActivityCompat.requestPermissions(this,
-//                    arrayOf(Manifest.permission.SEND_SMS),
-//                    PERMISSIONS_REQUEST_SEND_SMS)
-//            }
-//        }
     }
 
     private fun onWrongPatternDraw3Times() {
@@ -234,4 +220,5 @@ class MainActivity : AppCompatActivity() {
 
         builder.show()
     }
+
 }

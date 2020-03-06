@@ -17,6 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/phone" />
 
+
     <Button
         android:id="@+id/clear"
         style="@style/Widget.AppCompat.Button.Colored"
@@ -45,9 +46,9 @@
     <Button
         android:id="@+id/phone"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:onClick="onPhoneNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="onPhoneNumber"
         android:text="@string/phoneNumber"
         app:layout_constraintBottom_toTopOf="@+id/pattern_lock_view"
         app:layout_constraintEnd_toEndOf="parent"
